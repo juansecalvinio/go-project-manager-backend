@@ -24,7 +24,7 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/go-backend:latest
 
       - name: Deploy to EC2
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
